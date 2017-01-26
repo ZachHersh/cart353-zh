@@ -23,25 +23,45 @@ void draw() {
   imageMode(CORNER);
   rotate(0);
   image(art,0,0);
+  
+  if(mixer.tinted == 0) {
+    tint(255);
+  } else if (mixer.tinted == 1){
+    tint(255, 40, 40);
+  } else if (mixer.tinted == 2){
+    tint(80, 255, 80);
+  } else if (mixer.tinted > 2){
+    tint(80,80,250);
+  }
+  
   translate(width/2, height/2);
   imageMode(CENTER);
   rotate(twirl.rot);
   image(rose,0,0);
-  translate(-width/2, -height/2);
   
-  saved.loadPixels();
-  for (int x = 0; x < source.width; x++) {
-    for (int y = 0; y < source.height; y++) {
-      int loc = x + y*source.width;
-      
-    }
-  }
-
-  saved.updatePixels();
+  filter(BLUR, blur.blurFac);
+  translate(-width/2, -height/2);
+  tint(255);
+  
 }
 
 
-
+  
 void mousePressed() {
-    twirl.rot += 0.5;
+    twirl.twirlIt();
+    
+}
+
+void keyPressed() {
+ if (key == ' '){
+  mixer.mixIt(); 
+ }
+ 
+ if (key == CODED) {
+    if (keyCode == UP) {
+      blur.blurFactorP();
+    } else if (keyCode == DOWN) {
+      blur.blurFactorM();
+    } 
+  }
 }
