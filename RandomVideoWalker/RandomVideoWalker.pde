@@ -1,11 +1,14 @@
-import processing.video.*;
-Capture video;
+//import processing.video.*;
+//Capture video;
+
+Walker zach;
 
 void setup() {
-size(160,90);
-printArray(Capture.list());
-video = new Capture(this, Capture.list()[10]);
-video.start();
+size(400,400);
+//printArray(Capture.list());
+zach = new Walker();
+//video = new Capture(this, Capture.list()[10]);
+//video.start();
 }
 
 void draw() {
@@ -16,9 +19,11 @@ void draw() {
   }
   */
   
-  image(video, 0, 0);
+  //image(video, 0, 0);
+  zach.step();
+  zach.display();
 }
 
-void captureEvent(Capture video){
+/*void captureEvent(Capture video){
   video.read();
-}
+}*/
