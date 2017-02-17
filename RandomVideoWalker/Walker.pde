@@ -145,7 +145,7 @@ class Walker {
    yoff+=0.01;
    */
    
-   /* Method 7.3 - 2D perlin noise for stepsize walker
+   // Method 7.3 - 2D perlin noise for stepsize walker
    float stepsizex = int(map(noise(xoff),0,1,0,50));
    float stepsizey = int(map(noise(yoff),0,1,0,50));
    
@@ -157,7 +157,7 @@ class Walker {
    
    xoff+=0.001;
    yoff+=0.001;
-   */
+   
    
  }
   
