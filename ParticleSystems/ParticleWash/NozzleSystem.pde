@@ -1,12 +1,11 @@
 class NozzleSystem{
   ArrayList<Nozzle> nozzles;
-  ArrayList<Nozzle> nozzles2;
+  
   PVector origin;
   
   NozzleSystem(PVector location) {
     origin = location.copy();
     nozzles = new ArrayList<Nozzle>();
-    nozzles2 = new ArrayList<Nozzle>();
   }
   
   void addParticle(Nozzle noz) {
@@ -14,7 +13,7 @@ class NozzleSystem{
   }
   
   void run() {
-    addParticle(new Nozzle(new PVector(mouseX, mouseY)));
+    addParticle(new Nozzle(new PVector(origin.x, origin.y)));
     
     Iterator<Nozzle> it = nozzles.iterator();
     
