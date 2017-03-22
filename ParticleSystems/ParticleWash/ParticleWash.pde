@@ -6,16 +6,24 @@ Car car;
 ArrayList<NozzleSystem> ns;
 
 void setup() {
+  
   size(788,576);
+  
+  // Setting classes 
   carwash = new Carwash();
   car = new Car(); 
+  
+  // Particle system array
   ns = new ArrayList<NozzleSystem>();
-  ns.add(new NozzleSystem(new PVector(310, 94)));
-  ns.add(new NozzleSystem(new PVector(470, 94)));
-  ns.add(new NozzleSystem(new PVector(260, 64)));
-  ns.add(new NozzleSystem(new PVector(540, 64)));
+  
+  // Particle arrays
+  ns.add(new NozzleSystem(new PVector(310, 82), 2));
+  ns.add(new NozzleSystem(new PVector(470, 82), 2));
+  ns.add(new NozzleSystem(new PVector(300, 64), 1));
+  ns.add(new NozzleSystem(new PVector(500, 64), 1));
   
 }
+
 
 void draw() {
   displaySetting();
@@ -27,13 +35,13 @@ void draw() {
     ns.run();
   }
   
-  
   fill(0, 102, 153);
   String loc = mouseX + ", " + mouseY;
   text(loc, mouseX, mouseY);
 }
 
+
 void displaySetting() {
   carwash.display();
-  car.display();
+  car.run();
 }
