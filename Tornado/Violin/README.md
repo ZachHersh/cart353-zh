@@ -1,4 +1,4 @@
-###Prototype 1
+### Prototype 1
 
 ### Artist's Statement 
 
@@ -39,7 +39,7 @@ Other forces will be used in the destruction of objects, whose parts will be flu
 
 
 
-###Final Prototype
+### Final Prototype
 
 ### Artist's Statement
 
