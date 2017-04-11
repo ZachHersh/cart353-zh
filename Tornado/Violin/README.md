@@ -1,4 +1,4 @@
-#Prototype 1
+###Prototype 1
 
 ### Artist's Statement 
 
@@ -37,7 +37,9 @@ Other forces will be used in the destruction of objects, whose parts will be flu
 - How to move tornado to edges of map when matrix is translated to the edge of the map. ?
 
 
-#Final Prototype
+
+
+###Final Prototype
 
 ### Artist's Statement
 
