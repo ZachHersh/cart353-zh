@@ -32,57 +32,40 @@ class Cow {
     friction.mult(-1);
     friction.normalize();
     friction.mult(0.08);
-    
-    
-    //if(!capture) {
-    // if cow not yet captured by tornado..  
       
-      if(dist<160 && dist>50) {
-      // if distance between tornado and cow is close enough..
+    if(dist<160 && dist>50) {
+    
+      // if distance between tornado and cow is close enough..    
+      PVector f = PVector.div(force,mass); // Adjust gravity force for Mass.
         
-        PVector f = PVector.div(force,mass); // Adjust gravity force for Mass.
-        
-        // Pass on gravity and friction forces to acceleration. 
-        acceleration.add(f);
-        //acceleration.add(friction);
-        
-        if (capture == false) {
+      // Pass on gravity and friction forces to acceleration. 
+      acceleration.add(f);
+           
+      if (capture == false) {
         capture = true; //flips captured boolean
         tornado.score+=128496;
-        }
+      }
         
       // else if right next to tornado..  
-      } /*else if (dist<50 && capture==true) {
-        pos2 = enough;
-        velocity.mult(0);
-        capture = true; //flips captured boolean
-        tornado.score+=120000;
-      }*/ else if (dist>160) {
+      } else if (dist>160) {
         acceleration.add(friction);
       }
       
-      
-      
-    // else stick cow to tornado. 
-    //} else { 
-  
-     // PVector f = PVector.div(force,mass); // Adjust gravity force for Mass.
-        
-      // Pass on gravity and friction forces to acceleration. 
-     // acceleration.add(f);
-      //acceleration.add(friction);
-    //}
   }
   
+  
   void update() {
-  // Add forces to location(loc).
+    
+    // Add forces to location(loc).
     velocity.add(acceleration);
     loc.add(velocity);
     acceleration.mult(0);
   }
   
+  
   void checkEdges() {
-  // If cows are forced to the edges, bounce them back in the sketch.
+    
+    // If cows are forced to the edges, bounce them back in the sketch.
     if (loc.x > terrain.zoom.x) {
       velocity.x*=-1;
       loc.x=terrain.zoom.x;
@@ -97,13 +80,7 @@ class Cow {
     } else if (loc.y < 0) {
       velocity.y*=-1;
       loc.y=0;
-    }
-      
-  }
-    
-  // Shows cow shape.
-  void showCow() {
-    shape(cow,loc.x,loc.y,30,60); 
+    }  
   }
   
 }

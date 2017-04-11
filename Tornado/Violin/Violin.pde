@@ -1,49 +1,51 @@
+import java.util.Iterator;
+
 Terrain terrain;
 Tornado tornado;
-NewsOver newsO;
+NewsOver news;
+JetStream jetStream;
+Jet single;
 
 void setup() {
-  size(600,600);  
+  
+  size(600,600,P2D);  
   //fullScreen();
   
   terrain = new Terrain(10);
   tornado = new Tornado();
-  newsO = new NewsOver();
+  news = new NewsOver();
+  jetStream = new JetStream();
+  //single = new Jet();
   
 }
 
 void draw() {
   
-  background(255);
+  news.run();
   
-  for(int i=0; i<terrain.cows.length; i++) {
-    
-    // Calculate gravity.
-    PVector force = tornado.attract(terrain.cows[i]); 
-    
-    // Apply gravity to cows and stick them to tornado.
-    terrain.cows[i].applyForce(force, tornado);
-    
-    // If cow is not captured by tornado..
-    //if(!terrain.cows[i].capture) {
-      // Update cow location
-      terrain.cows[i].update();
-      // Keep cows within terrain edges
-      terrain.cows[i].checkEdges();
-    //}
-    
-  }
-  
-  //display terrain
-  pushMatrix();
-  translate(terrain.loc.x,terrain.loc.y);
-  terrain.showMap();
-  popMatrix();
-  
-  //display tornado
-  tornado.display();
-  
-  /*
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Todo - fix so that all cows get affected , maybe
+not running through whole array ?
+
+make cows spin as opposed to get stuck once captured.
+*/
+
+
+/*
   textSize(16);
   String myText = "tornado: " + int(tornado.trsLoc.x) + ", " + int(tornado.trsLoc.y) +
   "\ncow: " + int(terrain.cows[0].loc.x) + ", " + int(terrain.cows[0].loc.y) +
@@ -57,13 +59,3 @@ void draw() {
   //println(terrain.loc.x, terrain.loc.y);
   //println(terrain.zoom.x, terrain.zoom.y);
   */
-  
-  newsO.display();
-  
-}
-
-/* Todo - fix so that all cows get affected , maybe
-not running through whole array ?
-
-make cows spin as opposed to get stuck once captured.
-*/
