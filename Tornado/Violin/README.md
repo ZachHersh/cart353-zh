@@ -1,4 +1,4 @@
-#Violin
+#Prototype 1
 
 ### Artist's Statement 
 
@@ -35,3 +35,20 @@ Other forces will be used in the destruction of objects, whose parts will be flu
 - How to animate a jetstream and surrounding air temperature ? Cloud formations ?
 
 - How to move tornado to edges of map when matrix is translated to the edge of the map. ?
+
+
+#Final Prototype
+
+### Artist's Statement
+
+The underlying concept of the game is an exploration on and a slightly educational experience about the formation of tornados and their overall financial effect. The gravity of this effect is imposed and embodied through the newscast point of view which is a signifier of the reality of such events. It also makes use of modern lore on conspiracy theories to make the game slightly more entertaining and to give it a bit of a fringe culture edge. 
+
+The game starts with a preamble from a shadowy figure about destruction being good for the economy as it generates business in repair operations and insurance expenditure. The player then gets to control a tornado which at some point is intended to make them question if this could actually really be done and might prompt them to go research the phenomena of weather control. At the moment there aren’t very many hints for the player to do this but there are plans for such implementation. 
+
+This concept was worth exploring because of the use of force algorhythms, array lists and particle systems to make the game function properly. Basically, making use of several of the concepts studied during the semester. Learned video game concepts such translating images while keeping a stationary UPC to give it the impression of moving across terrain and distance and collision detection we’re also empowered by using them while cycling through arrays. This might at first seem like a simple operation but the different types of arrays and loops and different capabilities and terminology of these loops made this a challenging task.
+
+The game was also a chance to include visual production that was produced outside of programming with Adobe Illustrator. Game objects, logos, menus, an instruction screen portrait and the map we’re all produced using vector art. The advantage of the vector art was unlimited scaling without worrying of loss of detail.
+
+The game also holds potential to be furthered beyond the scope of a single semester by gaining a better understanding of physics engines. Unfortunately physics engines we’re beyond my grasp for the allotted time frame. Furthermore, a library called geomerative for processing allows a print out of the individual vector points and they’re handle locations which gives the shapes even greater flexibility and distortion for in game interaction with other objects.
+
+Overall, this is a compelling project that blends many conceptual angles to produce one well developed experience that while being short lived, will also reveal more of itself the more it is played. 
